@@ -6,9 +6,10 @@ pipeline:
     
   publish:
     docker:
+      registry: registry.hub.docker.com
       username: wolstena
       password: $$DOCKER_PASSWORD
       email: paul@shoutout.ca
       repo: wolstena/nginx-registry-proxy
-      debug: true
+      debug: yes
       tags: [ latest, 0.0.10 ]
