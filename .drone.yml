@@ -1,7 +1,5 @@
 ---
 build:
-  image: golang
+  image: nginx
   commands:
-    - go get
-    - go build
-    - go test
+    - nginx
