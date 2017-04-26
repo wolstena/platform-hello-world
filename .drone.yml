@@ -8,6 +8,5 @@ pipeline:
     docker:
       username: wolstena
       password: $$DOCKER_PASSWORD
-      email: paul@shoutout.ca
       repo: wolstena/nginx-registry-proxy
       tags: [ latest, 0.0.10 ]
