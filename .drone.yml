@@ -1,5 +1,5 @@
 ---
 build:
-  image: nginx
+  image: wolstena/nginx-ssl-secure
   commands:
     - nginx
