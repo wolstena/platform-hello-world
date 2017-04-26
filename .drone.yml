@@ -1,8 +1,13 @@
 pipeline:
   build:
-    image: node:latest
+    image: golang
     commands:
-      - npm install 
-      - npm test
-    when:
-      branch: master
+      - go get
+      - go build
+      - go test
+
+services:
+  postgres:
+    image: postgres:9.4.5
+    environment:
+      - POSTGRES_USER=myapp
