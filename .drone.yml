@@ -10,5 +10,4 @@ pipeline:
       password: $$DOCKER_PASSWORD
       email: paul@shoutout.ca
       repo: wolstena/nginx-registry-proxy
-      file: Dockerfile
       tags: [ latest, 0.0.10 ]
