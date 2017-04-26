@@ -9,7 +9,6 @@ pipeline:
       username: wolstena
       password: $$DOCKER_PASSWORD
       email: paul@shoutout.ca
-      image: plugins/docker
       repo: wolstena/nginx-registry-proxy
       file: Dockerfile
       tags: [ latest, 0.0.10 ]
