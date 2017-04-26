@@ -6,7 +6,9 @@ pipeline:
     
   publish:
     docker:
+      registry: registry.hub.docker.com:443
       username: wolstena
       password: $$DOCKER_PASSWORD
+      email: paul@shoutout.ca
       repo: wolstena/nginx-registry-proxy
       tags: [ latest, 0.0.10 ]
