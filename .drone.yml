@@ -4,3 +4,4 @@ build:
     - GRADLE_USER_HOME=~/.gradle
   commands:
     - ./gradlew test
+    - java -version
