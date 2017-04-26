@@ -1,7 +1,7 @@
-pipeline:
-  build:
-    image: wolstena/nginx-ssl-secure
-    command: 
-      - echo hello world
-    when:
-      branch: master
+---
+build:
+  image: golang
+  commands:
+    - go get
+    - go build
+    - go test
