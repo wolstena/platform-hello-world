@@ -1,17 +1,14 @@
 ---
 pipeline:
   build:
-    image: wolstena/nginx-ssl-secure
+    image: golang
     commands:
-      - nginx
-    when:
-      branch: master
+      - go get
+      - go build
+      - go test
 
-  publish:
-    docker:
-      username: wolstena
-      password: $$DOCKER_PASSWORD
-      email: paul@shoutout.ca
-      repo: wolstena/platform-hello-world
-      file: Dockerfile
-      tags: [ latest, 0.0.10, 0.0 ]
+services:
+  postgres:
+    image: postgres:9.4.5
+    environment:
+      - POSTGRES_USER=myapp
