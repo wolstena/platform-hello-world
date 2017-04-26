@@ -5,4 +5,13 @@ build:
     - nginx
   when:
     branch: master
-    
+
+publish:
+  docker:
+    username: wolstena
+    password: $$DOCKER_PASSWORD
+    email: paul@shoutout.ca
+    image: plugins/docker
+    repo: wolstena/platform-hello-world
+    file: Dockerfile
+    tags: [ latest, 0.0.10 ]
