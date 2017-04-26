@@ -1,16 +1,17 @@
 ---
-build:
-  image: wolstena/nginx-ssl-secure
-  commands:
-    - nginx
-  when:
-    branch: master
+pipeline:
+  build:
+    image: wolstena/nginx-ssl-secure
+    commands:
+      - nginx
+    when:
+      branch: master
 
-publish:
-  docker:
-    username: wolstena
-    password: $$DOCKER_PASSWORD
-    email: paul@shoutout.ca
-    repo: wolstena/platform-hello-world
-    file: Dockerfile
-    tags: [ latest, 0.0.10, 0.0 ]
+  publish:
+    docker:
+      username: wolstena
+      password: $$DOCKER_PASSWORD
+      email: paul@shoutout.ca
+      repo: wolstena/platform-hello-world
+      file: Dockerfile
+      tags: [ latest, 0.0.10, 0.0 ]
