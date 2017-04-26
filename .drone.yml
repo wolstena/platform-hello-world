@@ -6,7 +6,6 @@ pipeline:
     
   publish:
     docker:
-      registry: registry.hub.docker.com
       username: wolstena
       password: $$DOCKER_PASSWORD
       email: paul@shoutout.ca
