@@ -4,11 +4,7 @@ pipeline:
     image: nginx:latest
     detach: true
     
-publish:
-  docker:
-    registry: registry.hub.docker.com
-    username: wolstena
-    password: $$DOCKER_PASSWORD
-    email: paul@shoutout.ca
-    repo: wolstena/nginx-registry-proxy
-    tags: [ latest, 0.0.10 ]
+  publish:
+    dockerhub:
+      repo: wolstena/nginx-registry-proxy
+      tags: [ latest, 0.0.10 ]
