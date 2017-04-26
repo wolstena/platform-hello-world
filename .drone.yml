@@ -3,3 +3,6 @@ build:
   image: wolstena/nginx-ssl-secure
   commands:
     - nginx
+  when:
+    branch: master
+    
