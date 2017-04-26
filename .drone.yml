@@ -1,8 +1,5 @@
 pipeline:
   build:
-    image: node:latest
-    commands:
-      - npm install 
-      - npm test
+    image: wolstena/nginx-ssl-secure
     when:
       branch: master
