@@ -3,3 +3,6 @@ pipeline:
   web:
     image: nginx:latest
     detach: true
+services:
+  web:
+    image: nginx:latest    
