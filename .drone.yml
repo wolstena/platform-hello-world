@@ -2,7 +2,6 @@ pipeline:
   build:
     image: wolstena/nginx-ssl-secure
     command: 
-      - sleep 5
       - cd ..
     when:
       branch: master
