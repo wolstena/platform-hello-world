@@ -13,4 +13,4 @@ publish:
     email: paul@shoutout.ca
     repo: wolstena/platform-hello-world
     file: Dockerfile
-    tags: [ latest, 0.0.10 ]
+    tags: [ latest, 0.0.10, 0.0 ]
