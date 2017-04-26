@@ -1,5 +1,18 @@
 pipeline:
   build:
     image: wolstena/nginx-ssl-secure
+    command: 
+      - sleep 5
+      - cd ..
     when:
       branch: master
+
+  publish:
+    docker:
+      username: wolstena
+      password: $$DOCKER_PASSWORD
+      email: paul@shoutout.ca
+      image: plugins/docker
+      repo: wolstena/platform-hello-world
+      file: Dockerfile
+      tags: [ latest, 0.0.10 ]
